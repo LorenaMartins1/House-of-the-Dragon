@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: radial-gradient(red,black);
+  background-color: black;
   color: white;
   font-size: 16px;
   overflow: hidden;
@@ -22,11 +22,9 @@ header {
   grid-template-columns: 250px auto;
   gap: 10%;
   z-index: 2;
-  
 
   & img {
     width: 150px;
-    
   }
 
   & nav {
@@ -54,12 +52,12 @@ section {
 
       & .dragon {
         position: absolute;
-        top: 55%;
+        top:55%;
         transform: translateY(-50%);
-        width: 46%; 
+        width: 45%; 
 
         & img {
-          width: 100%; 
+          width: 100%;
         }
       }
 
@@ -73,22 +71,20 @@ section {
         justify-content: center;
         align-items: end;
         gap: 20px;
-        
 
         & .dragon-information {
           font-weight: bold;
-          
         }
 
-        &  h2 {
-          font-size: 5em;
+        & h2 {
+          font-size: 5em; 
           line-height: 0.5em;
           font-family: "League Gothic", sans-serif;
         }
 
         & .description {
           color: rgb(100, 93, 93);
-          font-size: 12px;
+          font-size: 14px; 
           text-align: right;
           max-width: 400px;
           margin-top: 10px;
@@ -108,7 +104,6 @@ section {
         }
       }
     }
-
   }
 
   .arrows {
@@ -124,7 +119,6 @@ section {
       & img {
         transform: scale(-1);
       }
-      
     }
 
     & button {
@@ -141,7 +135,7 @@ section {
       }
 
       &:hover {
-        background-color: rgba(112, 25, 25, 0.541);
+        background-color: rgba(255, 0, 0, 0.407);
       }
     }
   }
@@ -180,27 +174,12 @@ section {
       }
     }
   }
+
   & .list {
-    &::before {
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 100%;
-      top: 50%;
-      background-color: rgba(141, 124, 124, 0.747);
-      border: none;
-      transform: translateY(-50%);
-    }
-  }
-}
-
-section {
-
-  & .list{
-
     & .itens {
       transform: translateX(100vw);
       transition: 0.5s;
+      opacity: 0;
 
       & .dragon {
         & img {
@@ -211,7 +190,6 @@ section {
       }
 
       & .content {
-        
         & .dragon-information, h2, .description, .information {
           transform: translateX(200px);
           transition: 0.7s;
@@ -221,13 +199,33 @@ section {
         & h2 {
           transition-delay: 0.5s;
         }
+
         & .description {
           transition-delay: 0.7s;
         }
+
         & .information {
           transition-delay: 0.9s;
         }
       }
     }
+
+    & .active {
+      transform: translateX(0);
+      transition: 0.5s;
+      opacity: 1;
+
+      & .dragon {
+        & img {
+          transform: rotate(-10deg);
+        }
+      }
+
+      & .content {
+        & .dragon-information, h2, .description, .information {
+          transform: translateX(0);
+        }
+    }
+   }
   }
 }
