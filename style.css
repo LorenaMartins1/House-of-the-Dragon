@@ -22,9 +22,11 @@ header {
   grid-template-columns: 250px auto;
   gap: 10%;
   z-index: 2;
+  margin-top: 10px;
 
   & img {
     width: 150px;
+    
   }
 
   & nav {
@@ -101,6 +103,9 @@ section {
           color: white;
           font-weight: bold;
           font-family: "League Gothic", sans-serif;
+          position: relative;
+          overflow: hidden;
+          transition: transform 0.3s ease;
         }
       }
     }
@@ -193,19 +198,19 @@ section {
         & .dragon-information, h2, .description, .information {
           transform: translateX(200px);
           transition: 0.7s;
-          transition-delay: 0.3s;
+          transition-delay: 0.4s;
         }
 
         & h2 {
-          transition-delay: 0.5s;
+          transition-delay: 0.3s;
         }
 
         & .description {
-          transition-delay: 0.7s;
+          transition-delay: 0.4s;
         }
 
         & .information {
-          transition-delay: 0.9s;
+          transition-delay: 0.5s;
         }
       }
     }
@@ -225,7 +230,7 @@ section {
         & .dragon-information, h2, .description, .information {
           transform: translateX(0);
         }
+      }
     }
-   }
   }
 }
