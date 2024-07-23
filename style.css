@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: black;
+  background-image: url('img/background.jpeg');
   color: white;
   font-size: 16px;
   overflow: hidden;
@@ -22,7 +22,7 @@ header {
   grid-template-columns: 250px auto;
   gap: 10%;
   z-index: 2;
-  margin-top: 10px;
+  margin-top: auto;
 
   & img {
     width: 150px;
@@ -38,7 +38,7 @@ header {
 }
 
 section {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.842);
   height: 100vh;
   position: relative;
 
@@ -102,10 +102,10 @@ section {
           background-color: rgba(97, 12, 12, 0.26);
           color: white;
           font-weight: bold;
-          font-family: "League Gothic", sans-serif;
           position: relative;
           overflow: hidden;
           transition: transform 0.3s ease;
+          cursor: pointer;
         }
       }
     }
