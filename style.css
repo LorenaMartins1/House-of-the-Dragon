@@ -180,6 +180,54 @@ section {
       }
     }
   }
- 
+  & .list {
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      top: 50%;
+      background-color: rgba(141, 124, 124, 0.747);
+      border: none;
+      transform: translateY(-50%);
+    }
+  }
 }
 
+section {
+
+  & .list{
+
+    & .itens {
+      transform: translateX(100vw);
+      transition: 0.5s;
+
+      & .dragon {
+        & img {
+          transform: rotate(0);
+          transition: 0.5s;
+          transition-delay: 0.3s;
+        }
+      }
+
+      & .content {
+        
+        & .dragon-information, h2, .description, .information {
+          transform: translateX(200px);
+          transition: 0.7s;
+          transition-delay: 0.3s;
+        }
+
+        & h2 {
+          transition-delay: 0.5s;
+        }
+        & .description {
+          transition-delay: 0.7s;
+        }
+        & .information {
+          transition-delay: 0.9s;
+        }
+      }
+    }
+  }
+}
