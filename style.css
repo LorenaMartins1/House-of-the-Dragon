@@ -33,6 +33,16 @@ header {
     & ul {
       display: grid;
       grid-template-columns: repeat(3, 200px);
+
+      & li {
+        transition: color 0.3s, transform 0.3s;
+        cursor: pointer;
+      }
+
+      & li:hover {
+        color: rgba(255, 0, 0, 0.664);
+        transform: scale(1.2);
+      }
     }
   }
 }
@@ -102,10 +112,6 @@ section {
           background-color: rgba(97, 12, 12, 0.26);
           color: white;
           font-weight: bold;
-          position: relative;
-          overflow: hidden;
-          transition: transform 0.3s ease;
-          cursor: pointer;
         }
       }
     }

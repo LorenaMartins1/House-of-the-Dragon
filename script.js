@@ -31,3 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.information').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      gsap.to(button, { scale: 1.2, duration: 0.3 });
+    });
+    button.addEventListener('mouseleave', () => {
+      gsap.to(button, { scale: 1, duration: 0.3 });
+    });
+  });
+});
