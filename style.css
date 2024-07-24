@@ -34,14 +34,18 @@ header {
       display: grid;
       grid-template-columns: repeat(3, 200px);
 
-      & li {
-        transition: color 0.3s, transform 0.3s;
+      & a {
+        text-decoration: none;
+        color: rgba(240, 248, 255, 0.808);
+        font-size: 1rem;
+        transition: color 0.3s, transform 0.3s, font-size 0.3s;
         cursor: pointer;
       }
 
-      & li:hover {
+      & a:hover {
         color: rgba(255, 0, 0, 0.664);
         transform: scale(1.2);
+        font-size: 1.2rem;
       }
     }
   }
