@@ -59,13 +59,15 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px;
+    margin: 20px auto;
   }
 
-  & .container-dragons {
+    & .container-dragons {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    margin: 0 25px;
   }
 
   & .dragon {
