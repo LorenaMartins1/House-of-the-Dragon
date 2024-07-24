@@ -26,7 +26,6 @@ header {
 
   & img {
     width: 150px;
-    
   }
 
   & nav {
@@ -68,7 +67,7 @@ section {
 
       & .dragon {
         position: absolute;
-        top:55%;
+        top: 55%;
         transform: translateY(-50%);
         width: 45%; 
 
@@ -245,3 +244,17 @@ section {
   }
 }
 
+
+@media (max-width: 480px) {
+  header {
+    grid-template-columns: 100px auto;
+
+    & nav ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    & img {
+      width: 80px;
+    }
+  }
+}

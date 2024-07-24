@@ -68,6 +68,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 25px;
+    gap: 15px;
   }
 
   & .dragon {
@@ -105,5 +106,18 @@ main {
   & .dragon:hover img {
     transform: scale(1.1);
   }
-  
+}
+
+@media (max-width: 480px) {
+  header {
+    grid-template-columns: 100px auto;
+
+    & nav ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    & img {
+      width: 80px;
+    }
+  }
 }
