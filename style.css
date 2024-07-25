@@ -8,21 +8,22 @@
 
 body {
   background-image: url('img/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   font-size: 16px;
   overflow: hidden;
+  height: 100vh;
 }
 
 header {
   position: fixed;
-  width: 80vw;
+  width: 100%;
   left: 0;
-  transform: translateX(0);
-  display: grid;
-  grid-template-columns: 250px auto;
-  gap: 10%;
+  top: 0;
   z-index: 2;
-  margin-top: auto;
+  background: rgba(0, 0, 0, 0.7);
 
   & img {
     width: 150px;
@@ -30,8 +31,8 @@ header {
 
   & nav {
     & ul {
-      display: grid;
-      grid-template-columns: repeat(5, 200px);
+      display: flex;
+      gap: 20px;
 
       & a {
         text-decoration: none;
@@ -54,6 +55,10 @@ section {
   background-color: rgba(0, 0, 0, 0.842);
   height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   & .list {
     width: 80vw;
@@ -136,7 +141,7 @@ section {
     }
 
     & button {
-      top: 60%;
+      top: 50%;
       width: 50px;
       height: 50px;
       border-radius: 50%;
@@ -246,15 +251,34 @@ section {
 
 
 @media (max-width: 480px) {
-  header {
-    grid-template-columns: 100px auto;
+  header img {
+    width: 80px;
+  }
 
-    & nav ul {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  nav ul {
+    flex-direction: column;
+  }
 
-    & img {
-      width: 80px;
-    }
+  .content {
+    right: 20px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .description {
+    font-size: 12px;
+    max-width: 100%;
+  }
+
+  .dragon {
+    width: 90%;
+    top: 40%;
+  }
+
+  .dragon img {
+    width: 100%;
   }
 }
