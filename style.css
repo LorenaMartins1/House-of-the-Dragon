@@ -21,239 +21,289 @@ header {
   position: fixed;
   width: 80vw;
   left: 0;
-  transform: translateX(0);
   display: grid;
   grid-template-columns: 250px auto;
   gap: 10%;
   z-index: 2;
   margin-top: auto;
+}
 
-  & img {
-    width: 150px;
-  }
+header img {
+  width: 150px;
+}
 
-  & nav {
-    & ul {
-      display: grid;
-      grid-template-columns: repeat(5, 200px);
+header nav {
+  margin-left: 50px;
+}
 
-      & a {
-        text-decoration: none;
-        color: rgba(240, 248, 255, 0.808);
-        font-size: 1rem;
-        transition: color 0.3s, transform 0.3s, font-size 0.3s;
-        cursor: pointer;
-      }
+header nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+}
 
-      & a:hover {
-        color: rgba(255, 0, 0, 0.664);
-        transform: scale(1.2);
-        font-size: 1.2rem;
-      }
-    }
-  }
+header nav ul a {
+  text-decoration: none;
+  color: rgba(240, 248, 255, 0.808);
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s, font-size 0.3s;
+  cursor: pointer;
+}
+
+header nav ul a:hover {
+  color: rgba(255, 0, 0, 0.664);
+  transform: scale(1.2);
+  font-size: 1.2rem;
 }
 
 section {
-  background-color: rgba(0, 0, 0, 0.842);
+  background-color: rgba(0, 0, 0, 0.664);
   height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-  & .list {
-    width: 80vw;
-    height: 100%;
-    margin: auto;
-    position: relative;
+section .list {
+  width: 80vw;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
 
-    & .itens {
-      position: absolute;
-      inset: 0;
-      transition: opacity 0.5s, transform 0.5s;
-      display: flex;
-      flex-direction: column;
+section .list .itens {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  display: flex;
+  flex-direction: column;
+}
 
-      & .dragon {
-        position: absolute;
-        top: 55%;
-        transform: translateY(-50%);
-        width: 45%; 
+section .list .itens .dragon {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 45%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
 
-        & img {
-          max-width: 100%;
-          height: auto;
-        }
-      }
+section .list .itens .dragon img {
+  max-width: 100%;
+  height: auto;
+}
 
-      & .content {
-        position: absolute;
-        right: 100px;
-        width: 70%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: end;
-        gap: 20px;
+section .list .itens .content {
+  position: absolute;
+  right: 100px;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 20px;
+}
 
-        & .dragon-information {
-          font-weight: bold;
-        }
+section .list .itens .content .dragon-information {
+  font-weight: bold;
+}
 
-        & h2 {
-          font-size: 4.5em; 
-          line-height: 0.5em;
-          font-family: "League Gothic", sans-serif;
-        }
+section .list .itens .content h2 {
+  font-size: 4.5em;
+  line-height: 0.5em;
+  font-family: "League Gothic", sans-serif;
+}
 
-        & .description {
-          color: rgb(100, 93, 93);
-          font-size: 16px; 
-          text-align: right;
-          max-width: 400px;
-          margin-top: 10px;
-          margin-bottom: 20px;
-        }
+section .list .itens .content .description {
+  color: rgb(100, 93, 93);
+  font-size: 16px;
+  text-align: right;
+  max-width: 400px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
-        & .information {
-          border-radius: 30px;
-          height: 35px;
-          width: 120px;
-          text-transform: uppercase;
-          border: 2px solid rgba(255, 0, 0, 0.664);
-          background-color: rgba(97, 12, 12, 0.26);
-          color: white;
-          font-weight: bold;
-        }
-      }
-    }
-  }
+section .list .itens .content .information {
+  border-radius: 30px;
+  height: 35px;
+  width: 120px;
+  text-transform: uppercase;
+  border: 2px solid rgba(255, 0, 0, 0.664);
+  background-color: rgba(97, 12, 12, 0.26);
+  color: white;
+  font-weight: bold;
+}
 
-  .arrows {
-    width: 90vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -28px);
-    display: flex;
-    justify-content: space-between;
+section .arrows {
+  width: 90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -28px);
+  display: flex;
+  justify-content: space-between;
+}
 
-    & button:nth-child(1) {
-      & img {
-        transform: scale(-1);
-      }
-    }
+section .arrows button:nth-child(1) img {
+  transform: scale(-1);
+}
 
-    & button {
-      top: 50%;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
+section .arrows button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
 
-      & img {
-        width: 30px;
-        margin-top: 4px;
-      }
+section .arrows button img {
+  width: 30px;
+  margin-top: 4px;
+}
 
-      &:hover {
-        background-color: rgba(255, 0, 0, 0.407);
-      }
-    }
-  }
+section .arrows button:hover {
+  background-color: rgba(255, 0, 0, 0.407);
+}
 
-  .indicators {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 200px;
-    width: 90vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    gap: 15px;
-    font-family: "League Gothic", sans-serif;
+section .indicators {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 200px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 15px;
+  font-family: "League Gothic", sans-serif;
+}
 
-    & .number {
-      font-size: 3em;
-    }
+section .indicators .number {
+  font-size: 3em;
+}
 
-    & ul {
-      display: flex;
-      gap: 8px;
+section .indicators ul {
+  display: flex;
+  gap: 8px;
+}
 
-      & li {
-        width: 35px;
-        height: 4px;
-        background-color: rgba(255, 0, 0, 0.664);
-        border-radius: 5px;
-        transition: 0.5s;
-      }
+section .indicators ul li {
+  width: 35px;
+  height: 4px;
+  background-color: rgba(255, 0, 0, 0.664);
+  border-radius: 5px;
+  transition: 0.5s;
+}
 
-      & .active {
-        background-color: white;
-      }
-    }
-  }
+section .indicators ul .active {
+  background-color: white;
+}
 
-  & .list {
-    & .itens {
-      transform: translateX(100vw);
-      transition: 0.5s;
-      opacity: 0;
+section .list .itens {
+  transform: translateX(100vw);
+  transition: 0.5s;
+  opacity: 0;
+}
 
-      & .dragon {
-        & img {
-          transform: rotate(0);
-          transition: 0.5s;
-          transition-delay: 0.3s;
-        }
-      }
+section .list .itens .dragon img {
+  transform: rotate(0);
+  transition: 0.5s;
+  transition-delay: 0.3s;
+}
 
-      & .content {
-        & .dragon-information, h2, .description, .information {
-          transform: translateX(200px);
-          transition: 0.7s;
-          transition-delay: 0.4s;
-        }
+section .list .itens .content .dragon-information,
+section .list .itens .content h2,
+section .list .itens .content .description,
+section .list .itens .content .information {
+  transform: translateX(200px);
+  transition: 0.7s;
+  transition-delay: 0.4s;
+}
 
-        & h2 {
-          transition-delay: 0.3s;
-        }
+section .list .itens .content h2 {
+  transition-delay: 0.3s;
+}
 
-        & .description {
-          transition-delay: 0.4s;
-        }
+section .list .itens .content .description {
+  transition-delay: 0.4s;
+}
 
-        & .information {
-          transition-delay: 0.5s;
-        }
-      }
-    }
+section .list .itens .content .information {
+  transition-delay: 0.5s;
+}
 
-    & .active {
-      transform: translateX(0);
-      transition: 0.5s;
-      opacity: 1;
+section .list .active {
+  transform: translateX(0);
+  transition: 0.5s;
+  opacity: 1;
+}
 
-      & .dragon {
-        & img {
-          transform: rotate(-10deg);
-        }
-      }
+section .list .active .dragon img {
+  transform: rotate(-10deg);
+}
 
-      & .content {
-        & .dragon-information, h2, .description, .information {
-          transform: translateX(0);
-        }
-      }
-    }
-  }
+section .list .active .content .dragon-information,
+section .list .active .content h2,
+section .list .active .content .description,
+section .list .active .content .information {
+  transform: translateX(0);
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.664);
+  padding-top: 40px;
+}
+
+main #gallery {
+  display: flex;
+  justify-content: center;
+}
+
+main .container-dragons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+main .dragon {
+  width: 245px;
+  height: 245px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 30px;
+}
+
+main .dragon-name {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(87, 3, 3, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+
+main .dragon:hover img {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -262,131 +312,148 @@ section {
     grid-template-columns: 1fr;
     padding: 10px;
     gap: 10px;
-
-    & img {
-      width: 100px;
-    }
-
-    & nav {
-      & ul {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        justify-content: center;
-      }
-    }
   }
 
-  section {
-    & .list {
-      width: 90vw;
-      height: auto;
-    }
-
-    & .itens {
-      & .dragon {
-        width: 70%;
-        top: 45%;
-      }
-
-      & .content {
-        right: 0;
-        width: 100%;
-        padding: 20px;
-        align-items: center;
-
-        & h2 {
-          font-size: 2.5em;
-          text-align: center;
-        }
-        & .description {
-          color: white;
-          font-size: 12px;
-          text-align: center;
-        }
-        & .information {
-          height: 25px;
-          width: 80px;
-          font-size: 12px;
-        }
-      }
-    }
+  header img {
+    width: 100px;
   }
 
-  .arrows {
+  header nav ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+  }
+
+  section .list {
+    width: 90vw;
+    height: auto;
+  }
+
+  section .list .itens .dragon {
+    width: 70%;
+    top: 45%;
+  }
+
+  section .list .itens .content {
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+  }
+
+  section .list .itens .content h2 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  section .list .itens .content .description {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  section .list .itens .content .information {
+    height: 25px;
+    width: 80px;
+    font-size: 12px;
+  }
+
+  section .arrows {
     width: 100%;
   }
 
-  .indicators {
+  section .indicators {
     top: 80%;
   }
 }
 
 @media (max-width: 480px) {
-   body {
+  body {
     background-image: url(img/bgPhone.png);
-   }
+  }
   
   header {
+    grid-template-columns: 90px auto;
+  }
+
+  header nav ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  header img {
+    width: 80px;
+  }
+  
+  section .list {
     width: 100vw;
-    grid-template-columns: 1fr;
-    padding: 10px;
-    gap: 10px;
-
-    & img {
-      width: 70px;
-    }
-
-    & nav {
-      & ul {
-        grid-template-columns: 1fr;
-        gap: 5px;
-        justify-content: center;
-      }
-    }
+    height: auto;
   }
 
-  section {
-    & .list {
-      width: 100vw;
-      height: auto;
-    }
-
-    & .itens {
-      & .dragon {
-        width: 90%;
-        top: 40%;
-      }
-
-      & .content {
-        right: 0;
-        width: 100%;
-        padding: 10px;
-        align-items: center;
-
-        & h2 {
-          font-size: 2em;
-          text-align: center;
-        }
-        & .description {
-          color: white;
-          font-size: 10px;
-          text-align: center;
-          padding: 30px;
-        }
-        & .information {
-          height: 20px;
-          width: 60px;
-          font-size: 10px;
-        }
-      }
-    }
+  section .list .itens .dragon {
+    width: 75%;
+    top: 40%;
   }
 
-  .arrows {
+  section .list .itens .content {
+    right: 20px;
     width: 100%;
+    padding: 10px;
+    align-items: end;
   }
 
-  .indicators {
-    top: 85%;
+  section .list .itens .content h2 {
+    font-size: 2em;
   }
+
+  section .list .itens .content .description {
+    color: rgb(136, 130, 130);
+    font-size: 10px;
+    text-align: end;
+    padding: 15px;
+    padding-top: 25px;
+  }
+
+  section .list .itens .content .information {
+    height: 20px;
+    width: 60px;
+    font-size: 9.5px;
+  }
+
+  section .arrows {
+    width: 98%;
+  }
+
+  section .indicators {
+    top: 50%;
+    font-size: 0.7em;
+  }
+
+  main {
+    padding-top: 80px;
+  }
+
+  main .container-dragons {
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  main .dragon {
+    width: 120px;
+    height: 120px;
+  }
+  
+  main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  main .dragon-name {
+    bottom: 8px;
+    font-size: 0.9rem;
+    
+  }
+  
 }
