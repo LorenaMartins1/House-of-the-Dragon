@@ -376,6 +376,10 @@ main .dragon:hover img {
     grid-template-columns: 90px auto;
   }
 
+  header nav {
+    margin-left: 10px;
+  }
+
   header nav ul {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
